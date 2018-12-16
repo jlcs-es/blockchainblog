@@ -20,18 +20,7 @@ plugins:
   
 # prose.io config
 prose:
-  #rooturl: '_posts'
   media: 'img'
-  ignore:
-    - 404.html
-    - LICENSE
-    - feed.xml
-    - _config.yml
-    - /_layouts
-    - /_includes
-    - /css
-    - /img
-    - /js
   metadata:
     _posts:
       - name: "layout"
@@ -57,6 +46,13 @@ prose:
           help: "Enter date of post."
           placeholder: "yyyy-mm-dd"
           alterable: true
+      - name: "background"
+      	field:
+        	element: "text"
+            label: "Image"
+            help: "Enter image path"
+            placeholder: '/img/posts/01.jpg'
+            alterable: true
       - name: "published"
         field:
           element: "checkbox"
