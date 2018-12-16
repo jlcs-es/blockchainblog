@@ -47,8 +47,8 @@ prose:
           placeholder: "yyyy-mm-dd"
           alterable: true
       - name: "background"
-      	field:
-        	element: "text"
+        field:
+            element: "text"
             label: "Image"
             help: "Enter image path"
             placeholder: '/img/posts/01.jpg'
@@ -58,4 +58,3 @@ prose:
           element: "checkbox"
           label: "Publish"
           help: "Check to publish post, uncheck to hide."
-
