@@ -1,6 +1,6 @@
 ---
 layout: post
-published: false
+published: true
 title: Debugging Hyperledger Fabric's NodeJS chaincode with VS Code
 date: '2018-12-16'
 background: /img/posts/fabriclovesvscode.png
