@@ -1,7 +1,7 @@
 title:             Blockchain development tips
 #email:             your-email@example.com
 description:       My blog about blockchain development. Hyperledger Fabric, solidity, ...
-author:            José Luis Cánovas Sánchez
+author:            "José Luis Cánovas Sánchez"
 baseurl:           "/"
 url:               "https://jlcs-es.github.io/blockchainblog"
 
