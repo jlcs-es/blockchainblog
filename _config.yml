@@ -3,7 +3,7 @@ title:             Blockchain development tips
 description:       My blog about blockchain development. Hyperledger Fabric, solidity, ...
 author:            "José Luis Cánovas Sánchez"
 baseurl:           "/"
-url:               "https://jlcs-es.github.io/blockchainblog"
+url:               "https://blockchain.jlcs.es"
 
 # Social Profiles
 twitter_username:  jlcs_es
