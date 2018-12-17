@@ -12,7 +12,7 @@ To test our chaincode we don't need a complex fabric network, only an endorsing 
 <script src="https://gist.github.com/jlcs-es/163bf8cb09922a43befd90d6e5a86074.js"></script>
 
 
->```
+> ```
 devmode
 └───msp
     ├───admincerts
