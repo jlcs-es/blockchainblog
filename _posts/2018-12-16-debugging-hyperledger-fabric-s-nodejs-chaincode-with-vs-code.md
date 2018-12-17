@@ -13,7 +13,7 @@ To test our chaincode we don't need a complex fabric network, only an endorsing 
 
 This is a simple [Typescript](https://www.typescriptlang.org/) chaincode, which compiles to pure JavaScript, but adds nice tools within VS Code, like autocompletion. Really recommended when learning to use the Fabric SDK.
 
-<script src="https://gist.github.com/jlcs-es/64e1446838602a4369ecb0af525a2add.js"></script>
+<script src="https://gist.github.com/jlcs-es/65eb47f459747828c6fe72cab9356c80.js"></script>
 
 ## VS Code debugger
 
