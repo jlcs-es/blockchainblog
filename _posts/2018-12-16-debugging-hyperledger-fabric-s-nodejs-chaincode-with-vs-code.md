@@ -9,6 +9,26 @@ background: /img/posts/fabriclovesvscode.png
 
 To test our chaincode we don't need a complex fabric network, only an endorsing peer, an orderer and optionally a client to query the endorser.
 
+<script src="https://gist.github.com/jlcs-es/163bf8cb09922a43befd90d6e5a86074.js"></script>
+
+
+```
+devmode
+└───msp
+    ├───admincerts
+    ├───cacerts
+    ├───keystore
+    ├───signcerts
+    ├───tlscacerts
+    └───tlsintermediatecerts
+    devmode.sh
+    docker-compose.yaml
+    installandinstantiate.sh
+    myc.tx
+    orderer.block
+    script.sh
+```
+
 ## Test chaincode
 
 This is a simple [Typescript](https://www.typescriptlang.org/) chaincode, which compiles to pure JavaScript, but adds nice tools within VS Code, like autocompletion. Really recommended when learning to use the Fabric SDK.
