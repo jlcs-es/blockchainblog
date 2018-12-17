@@ -72,6 +72,8 @@ Next, we need to write a [launch configuration for VS Code](https://code.visuals
 
 ## Launch it all
 
+Now that we have our environment all set up, we can start debugging our code.
+
 ## Automated scripts
 
 <script src="https://gist.github.com/jlcs-es/56e55302897334bcc104e410fe631cde.js"></script>
