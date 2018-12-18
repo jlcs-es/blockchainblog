@@ -5,6 +5,8 @@ title: Debugging Hyperledger Fabric's NodeJS chaincode with VS Code
 date: '2018-12-16'
 background: /img/posts/fabriclovesvscode.png
 ---
+## How does debugging work in Hyperledger Fabric
+
 ## Development network
 
 To test our chaincode we don't need a complex fabric network, only an endorsing peer, an orderer and optionally a client to query the endorser.
