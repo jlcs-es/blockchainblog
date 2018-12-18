@@ -7,6 +7,11 @@ background: /img/posts/fabriclovesvscode.png
 ---
 ## How does debugging work in Hyperledger Fabric
 
+In a normal deployment, when an endorser peer wants to run the chaincode, it uses a docker container to isolate the execution of the chaincode. This isolated container and the peer node communicate through the bridge network between them, therefore, the invocation arguments and the response travel through the wire.
+
+This modularity where the peer doesn't execute the code, but another machine (in this case a docker container), provides the tools for development debugging: instead of creating an isolated docker container, use any other machine that can run NodeJS and communicate with the peer.
+
+
 ## Development network
 
 To test our chaincode we don't need a complex fabric network, only an endorsing peer, an orderer and optionally a client to query the endorser.
