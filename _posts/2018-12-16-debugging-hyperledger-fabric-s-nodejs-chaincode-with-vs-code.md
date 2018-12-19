@@ -164,5 +164,6 @@ Now that we have our environment all set up, we can start debugging our code.
 
 ## Automated script
 
+To avoid the hassle of running the install and instantiate commands manually, the following files offer an automated script that launches the network and then waits for you to start the VS Code debugger before installing and instantiating the chaincode:
 
 <script src="https://gist.github.com/jlcs-es/b211d181f736cba89080bf0bd6d9c8da.js"></script>
