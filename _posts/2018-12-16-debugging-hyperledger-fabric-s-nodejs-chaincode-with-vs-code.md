@@ -13,23 +13,37 @@ In a normal deployment, when an endorser peer wants to run the chaincode, it use
 +------------------------------------------------+
 |  Peer Node                                     |
 |                                                |
-|                                                |
 |         +-------------+       +-------------+  |
 |         |             |       |             |  |
 |         | Chaincode A |       | Chaincode B |  |
 |         |             |       |             |  |
 |         | container   |       | container   |  |
 |         |             |       |             |  |
-|         |             |       |             |  |
-|         |             |       |             |  |
 |         +-------------+       +-------------+  |
-|                                                |
-|                                                |
 |                                                |
 +------------------------------------------------+
 ```
 
-This modularity where the peer doesn't execute the code, but another machine (in this case a docker container), provides the tools for development debugging: instead of creating an isolated docker container, use any other machine that can run NodeJS and communicate with the peer.
+This modularity where the peer doesn't execute the code, but another machine (in this case a docker container), provides the tools for development debugging: instead of creating an isolated docker container, it uses any other machine that can run NodeJS and communicate with the peer.
+
+In our case, we will run the peer node inside a docker container, and then run the chaincode with the host's NodeJS. The peer's docker container will expose the default port 7052 so the NodeJS process can communicate with it.
+
+```
++---------------------------------------------------+
+| Host machine (e.g. Ubuntu 18.04)                  |
+|                                                   |
+|    +-[Docker]------+                              |
+|    |               |                              |
+|    |  Peer node    |                              |
+|    |               |                              |
+|    |               |          +-[NodeJS]------+   |
+|    |               |          |               |   |
+|    |          7052 +----------+ Chaincode     |   |
+|    |               |          |               |   |
+|    +---------------+          +---------------+   |
+|                                                   |
++---------------------------------------------------+
+```
 
 
 ## Development network
