@@ -26,7 +26,7 @@ In a normal deployment, when an endorser peer wants to run the chaincode, it use
 
 This modularity where the peer doesn't execute the code, but another machine (in this case a docker container), provides the tools for development debugging: instead of creating an isolated docker container, it uses any other machine that can run NodeJS and communicate with the peer.
 
-In our case, we will run the peer node inside a docker container, and then run the chaincode with the host's NodeJS. The peer's docker container will expose the default port 7052 so the NodeJS process can communicate with it.
+In our case, we will run the peer node inside a docker container, and then run the chaincode within the host's NodeJS. The peer's docker container will expose the default port 7052 so the NodeJS process can communicate with it.
 
 ```
 +---------------------------------------------------+
@@ -44,6 +44,8 @@ In our case, we will run the peer node inside a docker container, and then run t
 |                                                   |
 +---------------------------------------------------+
 ```
+
+Now that the chaincode is running in our host's NodeJS, the VS Code debugger can connect to it, providing all the debugging tools.
 
 
 ## Development network
