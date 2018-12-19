@@ -132,22 +132,33 @@ Now that we have our environment all set up, we can start debugging our code.
     
 2.	Launch the VS Code debugger
 
-	![]()
+	In the left panel, go to the debugging tab and press the green play button next to the name of our launch configuration:
+
+	![Start debugger button](/img/posts/startdebugger.jpg){:width="50%" style="margin-left: 25%;"}
     
 3.	_Install_ and instantiate the chaincode
 
 	Although the chaincode already is _installed_ in your machine, the peer node still requires this step to register the chaincode and then being able to instantiate it.
     
-*	Make changes to the chaincode
+    You can do it from the client container. First start an interactive terminal within the client container:
+    
+    `$ docker exec -it cli-dev bash`
+    
+    And then, run the install and instantiate commands:
+    
+    ```
+    # peer chaincode install -l node -n mycc -p /opt/gopath/src/chaincodedev/chaincode -v v0
+	# peer chaincode instantiate -o orderer:7050 -l node -n mycc -v v0 -c '{"Args":[]}' -C myc
+    ```
+    
+4	Make changes to the chaincode
 
 	Once the chaincode has been instantiated, you don't need to redo the previous steps. Once you make a new change to the chaincode, the task will rebuild it (or you can compile it with `tsc`), and you only need to relaunch the debugger
     
-    ![Restart debugger button](/img/posts/debugbar.jpg){:width="50%" style="margin-left: 25%"}
+    ![Restart debugger button](/img/posts/debugbar.jpg){:width="50%" style="margin-left: 25%;"}
 
 
-## Automated scripts
-
-
+## Automated script
 
 
 <script src="https://gist.github.com/jlcs-es/b211d181f736cba89080bf0bd6d9c8da.js"></script>
