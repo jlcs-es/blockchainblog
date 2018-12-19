@@ -126,6 +126,25 @@ This launch configuration takes the compiled Typescript code, runs the `chaincod
 
 Now that we have our environment all set up, we can start debugging our code.
 
+1.	Launch the blockchain network
+	
+    `docker-compose up`
+    
+2.	Launch the VS Code debugger
+
+	![]()
+    
+3.	_Install_ and instantiate the chaincode
+
+	Although the chaincode already is _installed_ in your machine, the peer node still requires this step to register the chaincode and then being able to instantiate it.
+    
+*	Make changes to the chaincode
+
+	Once the chaincode has been instantiated, you don't need to redo the previous steps. Once you make a new change to the chaincode, the task will rebuild it (or you can compile it with `tsc`), and you only need to relaunch the debugger
+    
+    ![](/img/posts/debugbar.jpg)
+
+
 ## Automated scripts
 
 
