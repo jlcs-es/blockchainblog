@@ -92,6 +92,8 @@ devmode
 
 The _fabric-samples_ devmode demo sets up a network with the default LevelDB database, but I find more useful in my chaincode development the CouchDB option (it also depends in your use case).
 
+The key aspect is that the peer node is started with the option **`--peer-chaincodedev=true`**.
+
 If you want to test your chaincode against the CouchDB database, the following docker-compose file sets up this simple network, but with a CouchDB database for the ledger:
 
 <script src="https://gist.github.com/jlcs-es/163bf8cb09922a43befd90d6e5a86074.js"></script>
@@ -136,9 +138,11 @@ Now that we have our environment all set up, we can start debugging our code.
 
 	![Start debugger button](/img/posts/launchdebugger.jpg){:width="50%" style="margin-left: 25%;"}
     
+    At this point the `shim.start(...)` function will connect to the running peer at the exposed 7052 port. The peer, in development mode, now knows where to contact for chaincode invocations.
+    
 3.	_Install_ and instantiate the chaincode
 
-	Although the chaincode already is _installed_ in your machine, the peer node still requires this step to register the chaincode and then being able to instantiate it.
+	Although the chaincode already is _installed_ in your machine, the peer node still requires these steps to register the chaincode and then being able to call it.
     
     You can do it from the client container. First start an interactive terminal within the client container:
     
