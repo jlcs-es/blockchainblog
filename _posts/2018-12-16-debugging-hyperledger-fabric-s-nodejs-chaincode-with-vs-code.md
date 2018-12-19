@@ -142,7 +142,7 @@ Now that we have our environment all set up, we can start debugging our code.
 
 	Once the chaincode has been instantiated, you don't need to redo the previous steps. Once you make a new change to the chaincode, the task will rebuild it (or you can compile it with `tsc`), and you only need to relaunch the debugger
     
-    ![](/img/posts/debugbar.jpg)
+    ![](/img/posts/debugbar.jpg)<!-- .element width="50%" -->
 
 
 ## Automated scripts
