@@ -45,12 +45,12 @@ In our case, we will run the peer node inside a docker container, and then run t
 +---------------------------------------------------+
 ```
 
-Now that the chaincode is running in our host's NodeJS, the VS Code debugger can connect to it, providing all the debugging tools.
+Now that the chaincode is running in our host's NodeJS, the VS Code debugger can connect to it, providing all the debugging tools, while the peer endorses the resulting transaction as in a real scenario.
 
 
 ## Development network
 
-To test our chaincode we don't need a complex fabric network, only an endorsing peer, an orderer and optionally a client to query the endorser.
+To test our chaincode we don't need a complex fabric network, only the endorsing peer, an orderer and optionally a client to query the endorser.
 
 ```
                    +--------+       +-----------+
@@ -64,7 +64,7 @@ To test our chaincode we don't need a complex fabric network, only an endorsing 
                    +----v------+
                    |  VS Code  |
                    |  Debugger |
-                   |           |
+                   |  NodeJS   |
                    +-----------+
 
 ```
@@ -109,9 +109,15 @@ The `mycc.ts` file naively implements the `ChaincodeInterface` with Typescript t
 
 <script src="https://gist.github.com/jlcs-es/65eb47f459747828c6fe72cab9356c80.js"></script>
 
+To compile the Typescript chaincode you can create a [VS Code task](https://code.visualstudio.com/Docs/editor/tasks) that automatically builds it after every save of the files:
+
+<script src="https://gist.github.com/jlcs-es/56e55302897334bcc104e410fe631cde.js"></script>
+
 ## VS Code debugger
 
-Next, we need to write a [launch configuration for VS Code](https://code.visualstudio.com/Docs/editor/debugging), which tells it how to run our chaincode.
+Next, we need to write a [launch configuration for VS Code](https://code.visualstudio.com/Docs/editor/debugging), which tells it how to run our chaincode in our local NodeJS installation.
+
+
 
 ## Launch it all
 
@@ -119,7 +125,7 @@ Now that we have our environment all set up, we can start debugging our code.
 
 ## Automated scripts
 
-<script src="https://gist.github.com/jlcs-es/56e55302897334bcc104e410fe631cde.js"></script>
+
 
 <script src="https://gist.github.com/jlcs-es/8006f329a17ff9ad2458a43f445b8dc1.js"></script>
 
