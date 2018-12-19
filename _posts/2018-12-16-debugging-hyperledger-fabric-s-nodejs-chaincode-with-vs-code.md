@@ -117,7 +117,7 @@ To compile the Typescript chaincode you can create a [VS Code task](https://code
 
 Next, we need to write a [launch configuration for VS Code](https://code.visualstudio.com/Docs/editor/debugging), which tells it how to run our chaincode in our local NodeJS installation.
 
-This launch configuration takes the compiled Typescript code, runs the `chaincode.js` file with the **option `--peer.address localhost:7052`, which tells the `shim.start(...)` function where the peer node is**.
+This launch configuration takes the compiled Typescript code, runs the `chaincode.js` file with the **option `--peer.address localhost:7052`, which tells the `shim.start(...)` function where the peer node is**:
 
 <script src="https://gist.github.com/jlcs-es/8006f329a17ff9ad2458a43f445b8dc1.js"></script>
 
