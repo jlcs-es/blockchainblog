@@ -134,7 +134,7 @@ Now that we have our environment all set up, we can start debugging our code.
 
 	In the left panel, go to the debugging tab and press the green play button next to the name of our launch configuration:
 
-	![Start debugger button](/img/posts/startdebugger.jpg){:width="50%" style="margin-left: 25%;"}
+	![Start debugger button](/img/posts/launchdebugger.jpg){:width="50%" style="margin-left: 25%;"}
     
 3.	_Install_ and instantiate the chaincode
 
