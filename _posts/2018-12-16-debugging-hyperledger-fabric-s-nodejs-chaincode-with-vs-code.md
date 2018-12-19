@@ -151,9 +151,9 @@ Now that we have our environment all set up, we can start debugging our code.
 	# peer chaincode instantiate -o orderer:7050 -l node -n mycc -v v0 -c '{"Args":[]}' -C myc
     ```
     
-4	Make changes to the chaincode
+4.	Make changes to the chaincode
 
-	Once the chaincode has been instantiated, you don't need to redo the previous steps. Once you make a new change to the chaincode, the task will rebuild it (or you can compile it with `tsc`), and you only need to relaunch the debugger
+    Once the chaincode has been instantiated, you don't need to redo the previous steps. Once you make a new change to the chaincode, the task will rebuild it (or you can compile it with `tsc`), and you only need to relaunch the debugger
     
     ![Restart debugger button](/img/posts/debugbar.jpg){:width="50%" style="margin-left: 25%;"}
 
