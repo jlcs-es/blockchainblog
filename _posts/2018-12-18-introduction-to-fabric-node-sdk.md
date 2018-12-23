@@ -1,7 +1,7 @@
 ---
 layout: post
 published: false
-title: Introduction to Fabric Node SDK
+title: How to work with the Fabric Node SDK
 subtitle: How to use Fabric's NodeJS SDK to invoke the chaincode
 date: '2018-12-18'
 ---
