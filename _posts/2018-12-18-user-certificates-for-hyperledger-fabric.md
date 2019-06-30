@@ -28,5 +28,16 @@ Therefore, if we are going to use our own certificates, first, we need to store 
 
 PEM format and private keys in [PKCS8](https://en.wikipedia.org/wiki/PKCS_8) format.
 
+### OpenSSL scripts
+
+These are **not production** intended scripts, as in the same function the private key and the parent CA signature take place. These are just for testing and inspiration purposes, so you can adapt to your companies policies from a minimal OpenSSL command.
+
+The following bash script defines three functions that generate valid H. Fabric certificates:
 
 <script src="https://gist.github.com/jlcs-es/90e94bde5ea8cfe1a84723646d23bc19.js"></script>
+
+NOTES:
+* These scripts use the Elliptic Curve Prime256v1, althouth Fabric is compatible with other curves.
+* All certificates are issued with ~10 years of validity.
+* Instead of modifying your default OpenSSL configuration file, these commands load the minimal configuration for H. Fabric, using the bash `<( command_that_prints_something)` utility. This saves the printed output of the inner command to a temporal file, and replaces all the `<(...)` with the temporal file path.
+
