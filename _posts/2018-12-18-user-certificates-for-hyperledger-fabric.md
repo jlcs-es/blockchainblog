@@ -27,3 +27,6 @@ The current NodeJS SDK (for Fabric v1.4), only seems to [admit](https://github.c
 Therefore, if we are going to use our own certificates, first, we need to store them in compatible formats, or transform them when passing the certificate and private key to the SDK. jsrasign is compatible with PEM formatted PKCS#1/5/8 private/public keys and X.509 certificates.
 
 PEM format and private keys in [PKCS8](https://en.wikipedia.org/wiki/PKCS_8) format.
+
+
+<script src="https://gist.github.com/jlcs-es/90e94bde5ea8cfe1a84723646d23bc19.js"></script>
