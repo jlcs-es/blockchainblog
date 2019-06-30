@@ -41,3 +41,34 @@ NOTES:
 * All certificates are issued with ~10 years of validity.
 * Instead of modifying your default OpenSSL configuration file, these commands load the minimal configuration for H. Fabric, using the bash `<( command_that_prints_something)` utility. This saves the printed output of the inner command to a temporal file, and replaces all the `<(...)` with the temporal file path.
 
+
+You can use this commands to generate your own Hyperledger Fabric Public Key Infrastructure, as well as directories tree with the MSPs.
+If you have tried the H. Fabric tutorial, you could mimic _cryptogen_, generate a tree for the certificates and keys generation, and another tree copying as needed for the peers, orderers an clients MSPs.
+
+### Usage in peers and orderers
+
+Once you have created your own certificate and keys files in the MSP directory trees, you are good to go. Just do as in Fabric Samples and regenerate all the channel artifacts. This should work as if you used the _cryptogen_ tool.
+
+
+### Usage in Node SDK
+
+> Probably also valid for the other SDKs.
+
+Just like with _cryptogen_'s certificates, we need to pass the PEM contents in the right format.
+
+Depending on how you choose to save the certificates and keys (files, database, ...) you have to manage loading the text content of them. Regarding the private keys, **encode** them into [PKCS8](https://en.wikipedia.org/wiki/PKCS_8) format so Node SDK doesn't [complain](https://github.com/hyperledger/fabric-sdk-node/blob/release-1.4/fabric-client/lib/impl/CryptoSuite_ECDSA_AES.js#L166).
+
+
+## PKCS11 Based Certificates
+
+For this part, you can setup a software based implementation of an HSM, so you can try all PKCS11 commands.
+
+### Brief introduction to how to use PKCS11 HSM
+
+### Generate certificates
+
+### Change the CKA_ID so Hyperledger Fabric finds your private keys
+
+### Usage in peers and orderers
+
+### Usage in Node SDK
